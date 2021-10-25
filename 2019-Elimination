@@ -1,0 +1,14 @@
+string = "101111001110111"
+k = 1
+string = string.split("0")
+x = 0
+maximum = 0
+
+while x < len(string)-k:
+    count = 0
+    for i in range(x, x+k+1):
+        count += string[i].count("1")
+    maximum = max(maximum, count)
+    x += 1
+
+print(maximum)
