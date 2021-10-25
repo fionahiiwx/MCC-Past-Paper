@@ -1,0 +1,15 @@
+Kittyn = [11,9,20,20,25]
+
+N = 7
+
+while len(Kittyn) < N:
+    num = 0
+    for i in range(-5,0):
+        num += Kittyn[i]
+    Kittyn.append(num)
+count = 0
+for i in Kittyn:
+    if i >= 3 and i%3==0:
+        count += 1
+print(count)
+# my method would take too long if num too big
