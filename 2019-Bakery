@@ -1,0 +1,13 @@
+def bakery(prices):
+    # most 3 expensive with the cheapest
+    # then the proceeding 3 most expensive with the 2nd cheapest
+    cost = 0
+    prices.sort()
+    while len(prices) > 0:
+        for i in range(3):
+            if i != 2:
+                cost += prices[-1]
+            prices.pop(-1)
+        cost += prices.pop(0)
+    return cost
+print(bakery([3, 2, 6, 8, 10, 1, 7, 9]))
